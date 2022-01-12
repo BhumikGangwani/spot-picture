@@ -1,11 +1,14 @@
 import colorgram
 
+# Update the IMAGE variable to extract colors from a different jpg file
 IMAGE = "hirst spot picture.jpg"
+
 
 class CollectColors:
     def __init__(self):
         self.rgb_colors = []
 
+    # Uses colorgram to get a list of 30 most common colors in IMAGE and returns the list
     def extract(self):
         colors = colorgram.extract(IMAGE, 30)
         for color in colors:
